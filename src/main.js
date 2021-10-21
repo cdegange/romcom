@@ -26,7 +26,6 @@ function createRandomCover() {
   var newTagline2 = descriptors[getRandomIndex(descriptors)];
 
   currentCover = new Cover(newCover, newTitle, newTagline1, newTagline2);
-
-
-    console.log(currentCover);
 }
+
+currentCover = document.querySelector(".cover-image");
