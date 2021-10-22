@@ -14,7 +14,19 @@ var currentTitle = document.querySelector(".cover-title");
 var currentTag1 = document.querySelector(".tagline-1");
 var currentTag2 = document.querySelector(".tagline-2");
 
+<<<<<<< HEAD
 var makeCoverButton = document.querySelector(".view form-view hidden");
+>>>>>>> main
+=======
+var makeCoverButton = document.querySelector(".make-new-button");
+var saveCoverButton = document.querySelector(".save-cover-button");
+var homeButton = document.querySelector(".home-button");
+var viewForm = document.querySelector(".form-view");
+var homeView = document.querySelector(".home-view");
+
+var savedCoversView = document.querySelector(".saved-covers-section");
+
+
 >>>>>>> main
 
 // We've provided a few variables below
@@ -43,6 +55,8 @@ getRandomCoverButton.addEventListener("click", createRandomCover);
 
 makeCoverButton.addEventListener("click", hideAndShow);
 >>>>>>> main
+
+saveCoverButton.addEventListener("click", viewSavedPage);
 
 // Create your event handlers and other functions here :point_down:
 // We've provided one function to get you started
@@ -73,7 +87,21 @@ currentCover = document.querySelector(".cover-image");
 =======
 
 function hideAndShow() {
-  
+  getRandomCoverButton.classList.add("hidden");
+  saveCoverButton.classList.add("hidden");
+  homeButton.classList.remove("hidden");
+  viewCoverForm();
+}
+
+function viewCoverForm() {
+  viewForm.classList.remove("hidden");
+  homeView.classList.add("hidden");
+
+}
+
+function viewSavedPage() {
+  viewForm.classList.add("hidden");
+  savedCoversView.classList.remove("hidden");
 }
 
 // 1. create a variable targeting make your own cover button
